@@ -1,0 +1,37 @@
+\documentclass[a4]{article}
+\usepackage{gnuplottex}
+\usepackage{graphicx}
+\usepackage{csvsimple}
+\usepackage{subcaption}
+\usepackage{amsmath}
+
+\title{COMP27112 Lab3}
+\author{}
+\begin{document}
+\maketitle
+
+\section{Solutions}
+1. There are two thresholds controlling the edge thresholding process. The low threshold is used to identify weak edges that may or may not be true edges. The High threshold is used to identify strong edges that are likely true edges.
+Edges with any value higher than the high threshold will be kept and if lower than the low threshold that edges will be discarded. Edges between the low and high thresholds are retained if they are connected to strong edges, otherwise they are discarded as well.
+This process helps to reduce the effects of noise and produce cleaner, more accurate edge detection results.
+
+2. The aperture parameter in the Canny edge detection algorithm refers to the size of the Sobel kernel used to compute the image gradient. Increasing the aperture parameter from 3 to 5, 7, 9, or greater will help to capture more detailed edge information in the image but can also result in more noise being included in the edge detection process. It will also take more resources when we increase it.
+
+3. The Hough transform has two parameters, rho and theta, that determine the resolution of the accumulator.
+The rho parameter specifies the distance resolution of the accumulator. The theta parameter specifies the angle resolution of the accumulator. Increasing the first parameter will reduce the resolution of the output line segments and increase the likelihood of multiple lines being detected for a single line in the input image. Reducing the second parameter will increase the resolution of the output line segments and reduce the likelihood of multiple lines being detected for a single line in the input image.
+
+4. The minimum line length parameter specifies the minimum length of a line that can be accepted. We can detect longer lines if we increase it and otherwise.
+The maximum gap parameter specifies the maximum gap between two line segments if they are to be considered part of the same line. We can detect two lines as one line if we increase this parameter and otherwise.
+
+5. The computed horizons is very likely to the horizon I thought. It can be influenced due to various reasons such as occlusions, perspective distortions, image noise, and variations in the landscape. And also the parameters of the functions.
+
+ 
+
+
+\appendix
+
+%% And raw data or code scripts you want to present should be included as appendices.
+
+\end{document}
+
+
